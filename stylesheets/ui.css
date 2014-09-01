@@ -1,0 +1,340 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Light Purple */
+/* Base Purple */
+/* Dark Purple */
+/* Background Purple */
+/* Base Blue */
+/* Light Blue: */
+/* Dark Blue: */
+/* Base Green: */
+/* Orange */
+/* Yellow */
+/* Red */
+/* Light Purple */
+/* Base Purple */
+/* Dark Purple */
+/* Background Purple */
+/* Base Blue */
+/* Light Blue: */
+/* Dark Blue: */
+/* Base Green: */
+/* Orange */
+/* Yellow */
+/* Red */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"), url("../fonts/Lato-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato Bold"), local("Lato-Bold"), url("../fonts/Lato-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Lato Light"), local("Lato-Light"), url("../fonts/Lato-light.woff") format("woff");
+}
+
+/* line 27, ../sass/_typo.scss */
+body {
+  font-family: Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-weight: 100;
+  color: #acacc6;
+}
+
+/* line 33, ../sass/_typo.scss */
+a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+/* line 37, ../sass/_typo.scss */
+a:hover {
+  color: #a2d3f0;
+}
+
+/* Style for this page only */
+/* line 13, ../sass/ui.scss */
+body {
+  background: #202027;
+  padding-top: 100px;
+}
+
+/* line 18, ../sass/ui.scss */
+nav {
+  width: 100%;
+  height: 36px;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #2c2f4d;
+}
+/* line 28, ../sass/ui.scss */
+nav a {
+  display: inline-block;
+  margin-right: 1.5%;
+  line-height: 36px;
+  font-size: 16px;
+  color: #75789d;
+}
+/* line 37, ../sass/ui.scss */
+nav a:hover {
+  color: #cecfdd;
+}
+
+/* line 43, ../sass/ui.scss */
+section {
+  padding: 10px 20px;
+}
+/* line 46, ../sass/ui.scss */
+section > header {
+  color: #fff;
+  border-bottom: 1px solid #6d6d6d;
+  padding-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/* line 55, ../sass/ui.scss */
+section article > header {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* line 63, ../sass/ui.scss */
+.color-list {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+}
+/* line 68, ../sass/ui.scss */
+.color-list li {
+  width: 18%;
+  height: 200px;
+  margin-right: 2.5%;
+  display: inline-block;
+  float: left;
+  position: relative;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+}
+/* line 81, ../sass/ui.scss */
+.color-list li:last-child {
+  margin-right: 0;
+}
+/* line 85, ../sass/ui.scss */
+.color-list li:before {
+  content: " ";
+  width: 90%;
+  padding: 0 5%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  bottom: 0;
+  position: absolute;
+  background: #373743;
+}
+/* line 101, ../sass/ui.scss */
+.color-list li:hover {
+  margin-top: -5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 109, ../sass/ui.scss */
+.color-list.purple li:nth-child(1) {
+  background: #75789d;
+}
+/* line 111, ../sass/ui.scss */
+.color-list.purple li:nth-child(1):before {
+  content: "$light-p-1 (#75789d)";
+}
+/* line 116, ../sass/ui.scss */
+.color-list.purple li:nth-child(2) {
+  background: #51568e;
+}
+/* line 118, ../sass/ui.scss */
+.color-list.purple li:nth-child(2):before {
+  content: "$light-p-2 (#51568e)";
+}
+/* line 122, ../sass/ui.scss */
+.color-list.purple li:nth-child(3) {
+  background: #363b76;
+}
+/* line 124, ../sass/ui.scss */
+.color-list.purple li:nth-child(3):before {
+  content: "$base-p (#363b76)";
+}
+/* line 129, ../sass/ui.scss */
+.color-list.purple li:nth-child(4) {
+  background: #2c2f4d;
+}
+/* line 131, ../sass/ui.scss */
+.color-list.purple li:nth-child(4):before {
+  content: "$dark-p-1 (#2c2f4d)";
+}
+/* line 136, ../sass/ui.scss */
+.color-list.purple li:nth-child(5) {
+  background: #1d1e29;
+}
+/* line 138, ../sass/ui.scss */
+.color-list.purple li:nth-child(5):before {
+  content: "$dark-p-2 (#1d1e29)";
+}
+/* line 145, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(1) {
+  background: #7eace1;
+}
+/* line 147, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(1):before {
+  content: "$light-b (#7eace1)";
+}
+/* line 152, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(2) {
+  background: #4a90e2;
+}
+/* line 154, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(2):before {
+  content: "$base-b (#4a90e2)";
+}
+/* line 158, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(3) {
+  background: #3970af;
+}
+/* line 160, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(3):before {
+  content: "$dark-b (#3970af)";
+}
+/* line 165, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(4) {
+  background: #11c568;
+}
+/* line 167, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(4):before {
+  content: "$base-g (#11c568)";
+}
+/* line 172, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(5) {
+  background: #059e4f;
+}
+/* line 174, ../sass/ui.scss */
+.color-list.blue-green li:nth-child(5):before {
+  content: "$dark-g (#059e4f)";
+}
+/* line 181, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(1) {
+  background: #be4444;
+}
+/* line 183, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(1):before {
+  content: "$light-r (#be4444)";
+}
+/* line 188, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(2) {
+  background: #a42b2b;
+}
+/* line 190, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(2):before {
+  content: "$base-r (#a42b2b)";
+}
+/* line 194, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(3) {
+  background: #5e0b0b;
+}
+/* line 196, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(3):before {
+  content: "$dark-r (#5e0b0b)";
+}
+/* line 201, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(4) {
+  background: #ff9c00;
+}
+/* line 203, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(4):before {
+  content: "$orange (#ff9c00)";
+}
+/* line 208, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(5) {
+  background: #ffbb0d;
+}
+/* line 210, ../sass/ui.scss */
+.color-list.red-orange-yellow li:nth-child(5):before {
+  content: "$yellow (#ffbb0d)";
+}

@@ -1,0 +1,215 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "_color.scss";
+@import "_typo.scss";
+@import "_transition.scss";
+
+/* Style for this page only */
+
+body {
+	background  : $bg-p;
+	padding-top : 100px;
+}
+
+nav {
+	width         : 100%;
+	height        : 36px;
+	padding       : 10px 20px;
+	position      : fixed;
+	top           : 0;
+	left          : 0;
+	// background : darken($base-p, 10%);
+	background    : $dark-p-1;
+
+	a {
+		display      : inline-block;
+		margin-right : 1.5%;
+
+		line-height : 36px;
+		font-size   : 16px;
+		
+		color: $light-p-1;
+
+		&:hover {
+			color: lighten($light-p-1,30%);
+		}
+	}
+}
+
+section {
+	padding: 10px 20px;
+
+	 > header {
+		color         : #fff;
+		border-bottom : 1px solid desaturate($light-p, 50%);
+		padding-bottom: 10px;
+		font-size     : 24px;
+		margin-bottom : 20px;
+	}
+
+	article {
+		> header {
+			color         : #ccc;
+			font-size     : 18px;
+			margin-bottom : 20px;
+		}
+	}
+}
+
+.color-list {
+	width         : 100%;
+	height        : 200px;
+	margin-bottom : 20px;
+
+	li {
+		width        : 18%;
+		height       : 200px;
+		margin-right : 2.5%;
+		display      : inline-block;
+		float        : left;
+		position     : relative;
+
+		border-radius: 4px;
+		background : #fff;
+
+		overflow: hidden;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:before {
+			content     : " ";
+			width       : 90%;
+			padding     : 0 5%;
+			height      : 40px;
+			line-height : 40px;
+			font-size   : 14px;
+			color       : #fff;
+
+			bottom      : 0;
+			position    : absolute;
+
+			background : lighten($bg-p, 10%);
+
+		}
+
+		&:hover {
+			margin-top: -5px;
+			@include transit;
+		}
+	}
+
+
+	&.purple {
+		li:nth-child(1) {
+			background: $light-p-1;
+			&:before {
+				content: "$light-p-1 (#{$light-p-1})";
+			}
+		}
+
+		li:nth-child(2) {
+			background: $light-p-2;
+			&:before {
+				content: "$light-p-2 (#{$light-p-2})";
+			}
+		}
+		li:nth-child(3) {
+			background: $base-p;
+			&:before {
+				content: "$base-p (#{$base-p})";
+			}
+		}
+
+		li:nth-child(4) {
+			background: $dark-p-1;
+			&:before {
+				content: "$dark-p-1 (#{$dark-p-1})";
+			}
+		}
+
+		li:nth-child(5) {
+			background: $dark-p-2;
+			&:before {
+				content: "$dark-p-2 (#{$dark-p-2})";
+			}
+		}
+	}
+
+	&.blue-green {
+		li:nth-child(1) {
+			background: $light-b;
+			&:before {
+				content: "$light-b (#{$light-b})";
+			}
+		}
+
+		li:nth-child(2) {
+			background: $base-b;
+			&:before {
+				content: "$base-b (#{$base-b})";
+			}
+		}
+		li:nth-child(3) {
+			background: $dark-b;
+			&:before {
+				content: "$dark-b (#{$dark-b})";
+			}
+		}
+
+		li:nth-child(4) {
+			background: $base-g;
+			&:before {
+				content: "$base-g (#{$base-g})";
+			}
+		}
+
+		li:nth-child(5) {
+			background: $dark-g;
+			&:before {
+				content: "$dark-g (#{$dark-g})";
+			}
+		}
+	}
+
+	&.red-orange-yellow {
+		li:nth-child(1) {
+			background: $light-r;
+			&:before {
+				content: "$light-r (#{$light-r})";
+			}
+		}
+
+		li:nth-child(2) {
+			background: $base-r;
+			&:before {
+				content: "$base-r (#{$base-r})";
+			}
+		}
+		li:nth-child(3) {
+			background: $dark-r;
+			&:before {
+				content: "$dark-r (#{$dark-r})";
+			}
+		}
+
+		li:nth-child(4) {
+			background: $orange;
+			&:before {
+				content: "$orange (#{$orange})";
+			}
+		}
+
+		li:nth-child(5) {
+			background: $yellow;
+			&:before {
+				content: "$yellow (#{$yellow})";
+			}
+		}
+	}
+}

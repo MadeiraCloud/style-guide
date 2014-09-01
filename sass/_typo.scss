@@ -1,0 +1,40 @@
+@import "_color.scss";
+
+@font-face
+{
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Lato Regular'), local('Lato-Regular'), url('../fonts/Lato-regular.woff') format('woff');
+}
+
+@font-face
+{
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Lato Bold'), local('Lato-Bold'), url('../fonts/Lato-Bold.woff') format('woff');
+}
+
+@font-face
+{
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 100;
+	src: local('Lato Light'), local('Lato-Light'), url('../fonts/Lato-light.woff') format('woff');
+}
+
+body {
+	font-family: Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;;
+	font-weight: 100;
+	color: desaturate(lighten($light-p, 30%),10%);
+}
+
+a {
+	color: $base-b;
+	text-decoration: none;
+
+	&:hover {
+		color: adjust_hue(lighten($base-b,20%),-10deg);
+	}
+}
