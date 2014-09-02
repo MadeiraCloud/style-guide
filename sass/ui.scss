@@ -23,7 +23,7 @@ nav {
 	top           : 0;
 	left          : 0;
 	z-index       : 99;
-	
+
 	// background : darken($base-p, 10%);
 	background    : $dark-p-1;
 
@@ -85,16 +85,14 @@ section {
 		}
 
 		&:before {
-			content     : " ";
-			width       : 90%;
 			padding     : 0 5%;
+			display     : block;
 			height      : 40px;
 			line-height : 40px;
 			font-size   : 14px;
 			color       : #fff;
-
-			bottom      : 0;
-			position    : absolute;
+			top         : 160px;
+			position    : relative;
 
 			background : lighten($bg-p, 10%);
 

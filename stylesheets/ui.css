@@ -211,141 +211,140 @@ section article > header {
 }
 /* line 87, ../sass/ui.scss */
 .color-list li:before {
-  content: " ";
-  width: 90%;
   padding: 0 5%;
+  display: block;
   height: 40px;
   line-height: 40px;
   font-size: 14px;
   color: #fff;
-  bottom: 0;
-  position: absolute;
+  top: 160px;
+  position: relative;
   background: #373743;
 }
-/* line 103, ../sass/ui.scss */
+/* line 101, ../sass/ui.scss */
 .color-list li:hover {
   margin-top: -5px;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 111, ../sass/ui.scss */
+/* line 109, ../sass/ui.scss */
 .color-list.purple li:nth-child(1) {
   background: #75789d;
 }
-/* line 113, ../sass/ui.scss */
+/* line 111, ../sass/ui.scss */
 .color-list.purple li:nth-child(1):before {
   content: "$light-p-1 (#75789d)";
 }
-/* line 118, ../sass/ui.scss */
+/* line 116, ../sass/ui.scss */
 .color-list.purple li:nth-child(2) {
   background: #51568e;
 }
-/* line 120, ../sass/ui.scss */
+/* line 118, ../sass/ui.scss */
 .color-list.purple li:nth-child(2):before {
   content: "$light-p-2 (#51568e)";
 }
-/* line 124, ../sass/ui.scss */
+/* line 122, ../sass/ui.scss */
 .color-list.purple li:nth-child(3) {
   background: #363b76;
 }
-/* line 126, ../sass/ui.scss */
+/* line 124, ../sass/ui.scss */
 .color-list.purple li:nth-child(3):before {
   content: "$base-p (#363b76)";
 }
-/* line 131, ../sass/ui.scss */
+/* line 129, ../sass/ui.scss */
 .color-list.purple li:nth-child(4) {
   background: #2c2f4d;
 }
-/* line 133, ../sass/ui.scss */
+/* line 131, ../sass/ui.scss */
 .color-list.purple li:nth-child(4):before {
   content: "$dark-p-1 (#2c2f4d)";
 }
-/* line 138, ../sass/ui.scss */
+/* line 136, ../sass/ui.scss */
 .color-list.purple li:nth-child(5) {
   background: #1d1e29;
 }
-/* line 140, ../sass/ui.scss */
+/* line 138, ../sass/ui.scss */
 .color-list.purple li:nth-child(5):before {
   content: "$dark-p-2 (#1d1e29)";
 }
-/* line 147, ../sass/ui.scss */
+/* line 145, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(1) {
   background: #7eace1;
 }
-/* line 149, ../sass/ui.scss */
+/* line 147, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(1):before {
   content: "$light-b (#7eace1)";
 }
-/* line 154, ../sass/ui.scss */
+/* line 152, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(2) {
   background: #4a90e2;
 }
-/* line 156, ../sass/ui.scss */
+/* line 154, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(2):before {
   content: "$base-b (#4a90e2)";
 }
-/* line 160, ../sass/ui.scss */
+/* line 158, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(3) {
   background: #3970af;
 }
-/* line 162, ../sass/ui.scss */
+/* line 160, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(3):before {
   content: "$dark-b (#3970af)";
 }
-/* line 167, ../sass/ui.scss */
+/* line 165, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(4) {
   background: #11c568;
 }
-/* line 169, ../sass/ui.scss */
+/* line 167, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(4):before {
   content: "$base-g (#11c568)";
 }
-/* line 174, ../sass/ui.scss */
+/* line 172, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(5) {
   background: #059e4f;
 }
-/* line 176, ../sass/ui.scss */
+/* line 174, ../sass/ui.scss */
 .color-list.blue-green li:nth-child(5):before {
   content: "$dark-g (#059e4f)";
 }
-/* line 183, ../sass/ui.scss */
+/* line 181, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(1) {
   background: #be4444;
 }
-/* line 185, ../sass/ui.scss */
+/* line 183, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(1):before {
   content: "$light-r (#be4444)";
 }
-/* line 190, ../sass/ui.scss */
+/* line 188, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(2) {
   background: #a42b2b;
 }
-/* line 192, ../sass/ui.scss */
+/* line 190, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(2):before {
   content: "$base-r (#a42b2b)";
 }
-/* line 196, ../sass/ui.scss */
+/* line 194, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(3) {
   background: #5e0b0b;
 }
-/* line 198, ../sass/ui.scss */
+/* line 196, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(3):before {
   content: "$dark-r (#5e0b0b)";
 }
-/* line 203, ../sass/ui.scss */
+/* line 201, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(4) {
   background: #ff9c00;
 }
-/* line 205, ../sass/ui.scss */
+/* line 203, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(4):before {
   content: "$orange (#ff9c00)";
 }
-/* line 210, ../sass/ui.scss */
+/* line 208, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(5) {
   background: #ffbb0d;
 }
-/* line 212, ../sass/ui.scss */
+/* line 210, ../sass/ui.scss */
 .color-list.red-orange-yellow li:nth-child(5):before {
   content: "$yellow (#ffbb0d)";
 }
