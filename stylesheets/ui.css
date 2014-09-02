@@ -127,6 +127,16 @@ a:hover {
   color: #a2d3f0;
 }
 
+/* line 42, ../sass/_typo.scss */
+h1 {
+  font-size: 1.6em;
+}
+
+/* line 46, ../sass/_typo.scss */
+h2 {
+  font-size: 1.4em;
+}
+
 /* Style for this page only */
 /* line 13, ../sass/ui.scss */
 body {

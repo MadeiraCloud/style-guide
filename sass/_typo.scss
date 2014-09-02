@@ -25,9 +25,9 @@
 }
 
 body {
-	font-family: Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;;
-	font-weight: 100;
-	color: desaturate(lighten($light-p, 30%),10%);
+	font-family : Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;;
+	font-weight : 100;
+	color       : desaturate(lighten($light-p, 30%),10%);
 }
 
 a {
@@ -37,4 +37,12 @@ a {
 	&:hover {
 		color: adjust_hue(lighten($base-b,20%),-10deg);
 	}
+}
+
+h1 {
+	font-size: 1.6em;
+}
+
+h2 {
+	font-size: 1.4em;
 }
