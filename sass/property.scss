@@ -1,0 +1,64 @@
+@import "compass/reset";
+@import "_color.scss";
+@import "_typo.scss";
+@import "_transition.scss";
+
+.property {
+    background-color: #1a1a1b;
+    width: 530px;
+    font-size: 14px;
+    .group {
+        // border-bottom: 1px #1a1a1b solid;
+        display: inline-block;
+    }
+    .key {
+        width: 200px;
+        float: left;
+        padding: 15px;
+        background-color: #34343e;
+        display: block;
+    }
+    .value {
+        width: 300px;
+        float: left;
+        // height: 44px;
+        background-color: #27272b;
+        border: 0;
+    }
+    .selectize-control {
+        height: 44px;
+        .selectize-input {
+            color: #fff;
+            border: 0;
+            height: 44px;
+            &.focus {
+                background-color: #424242;
+            }
+            input {
+                color: #fff;
+                padding: 6px;
+                font: inherit;
+            }
+            div {
+                padding: 6px;
+            }
+        }
+        .selectize-dropdown {
+            background-color: #373737;
+            color: #9d9d97;
+            border: 0;
+            [data-selectable], .optgroup-header {
+                padding: 14px;
+            }
+            .selectize-dropdown-content {
+                .selected {
+                    color: #fff;
+                }
+                .active {
+                    background-color: #363644;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

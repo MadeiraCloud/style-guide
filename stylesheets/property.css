@@ -1,0 +1,203 @@
+/* line 17, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Light Purple */
+/* Base Purple */
+/* Dark Purple */
+/* Background Purple */
+/* Base Blue */
+/* Light Blue: */
+/* Dark Blue: */
+/* Base Green: */
+/* Orange */
+/* Yellow */
+/* Red */
+/* Light Purple */
+/* Base Purple */
+/* Dark Purple */
+/* Background Purple */
+/* Base Blue */
+/* Light Blue: */
+/* Dark Blue: */
+/* Base Green: */
+/* Orange */
+/* Yellow */
+/* Red */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"), url("../fonts/Lato-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato Bold"), local("Lato-Bold"), url("../fonts/Lato-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Lato Light"), local("Lato-Light"), url("../fonts/Lato-light.woff") format("woff");
+}
+
+/* line 27, ../sass/_typo.scss */
+body {
+  font-family: Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-weight: 100;
+  color: #acacc6;
+}
+
+/* line 33, ../sass/_typo.scss */
+a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+/* line 37, ../sass/_typo.scss */
+a:hover {
+  color: #a2d3f0;
+}
+
+/* line 42, ../sass/_typo.scss */
+h1 {
+  font-size: 1.6em;
+}
+
+/* line 46, ../sass/_typo.scss */
+h2 {
+  font-size: 1.4em;
+}
+
+/* line 6, ../sass/property.scss */
+.property {
+  background-color: #1a1a1b;
+  width: 530px;
+  font-size: 14px;
+}
+/* line 10, ../sass/property.scss */
+.property .group {
+  display: inline-block;
+}
+/* line 14, ../sass/property.scss */
+.property .key {
+  width: 200px;
+  float: left;
+  padding: 15px;
+  background-color: #34343e;
+  display: block;
+}
+/* line 21, ../sass/property.scss */
+.property .value {
+  width: 300px;
+  float: left;
+  background-color: #27272b;
+  border: 0;
+}
+/* line 28, ../sass/property.scss */
+.property .selectize-control {
+  height: 44px;
+}
+/* line 30, ../sass/property.scss */
+.property .selectize-control .selectize-input {
+  color: #fff;
+  border: 0;
+  height: 44px;
+}
+/* line 34, ../sass/property.scss */
+.property .selectize-control .selectize-input.focus {
+  background-color: #424242;
+}
+/* line 37, ../sass/property.scss */
+.property .selectize-control .selectize-input input {
+  color: #fff;
+  padding: 6px;
+  font: inherit;
+}
+/* line 42, ../sass/property.scss */
+.property .selectize-control .selectize-input div {
+  padding: 6px;
+}
+/* line 46, ../sass/property.scss */
+.property .selectize-control .selectize-dropdown {
+  background-color: #373737;
+  color: #9d9d97;
+  border: 0;
+}
+/* line 50, ../sass/property.scss */
+.property .selectize-control .selectize-dropdown [data-selectable], .property .selectize-control .selectize-dropdown .optgroup-header {
+  padding: 14px;
+}
+/* line 54, ../sass/property.scss */
+.property .selectize-control .selectize-dropdown .selectize-dropdown-content .selected {
+  color: #fff;
+}
+/* line 57, ../sass/property.scss */
+.property .selectize-control .selectize-dropdown .selectize-dropdown-content .active {
+  background-color: #363644;
+  color: #fff;
+}
