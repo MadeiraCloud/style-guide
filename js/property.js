@@ -1,5 +1,5 @@
 $(function() {
-  $('body').on('DOMNodeInserted', '.property .group', function(event) {
+  $('.property').on('DOMNodeInserted', '.group', function(event) {
     return setTimeout(function() {
       var $valueDom;
       $valueDom = $(event.target).find('select.value');
@@ -8,32 +8,31 @@ $(function() {
           $valueDom.selectize({
             persist: false,
             valueField: 'value',
-            labelField: 'name',
-            searchField: ['name'],
+            labelField: 'text',
+            searchField: ['text'],
             create: false,
             openOnFocus: false,
             plugins: ['restore_on_return'],
             onInitialize: function() {
-              return this.setValue(this.$input.attr('value'));
+              return this.setValue(this.$input.attr('value'), true);
             },
             options: [
               {
-                name: 'TRUE',
+                text: 'TRUE',
                 value: 'true'
               }, {
-                name: 'FALSE',
+                text: 'FALSE',
                 value: 'false'
               }
             ],
             render: {
               option: function(item) {
-                return '<div>O ' + item.name + '</div>';
+                return '<div>O ' + item.text + '</div>';
               },
               item: function(item) {
-                return '<div>O ' + item.name + '</div>';
+                return '<div>O ' + item.text + '</div>';
               }
-            },
-            onFocus: function() {}
+            }
           });
         }
         if ($valueDom.hasClass('option')) {
@@ -43,12 +42,23 @@ $(function() {
             openOnFocus: false,
             plugins: ['restore_on_return'],
             onInitialize: function() {
-              return this.setValue(this.$input.attr('value'));
+              return this.setValue(this.$input.attr('value'), true);
+            },
+            render: {
+              option: function(item) {
+                return '<div>O ' + item.text + '</div>';
+              },
+              item: function(item) {
+                return '<div>O ' + item.text + '</div>';
+              }
             }
           });
         }
       }
-    }, 0);
+    }, 1);
   });
-  return $('.property').html($('#dom').html()).append($('#dom').html());
+  $(document).on('change', 'select.value', function(event) {
+    return console.log(event.target.value);
+  });
+  return $('.property').html($('#dom').html());
 });

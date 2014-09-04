@@ -1756,12 +1756,19 @@
          *
          * @param {mixed} value
          */
-        setValue: function(value) {
-            this.oldValue = value;
-            debounce_events(this, ['change'], function() {
-                this.clear();
-                this.addItems(value);
-            });
+        setValue: function(value, silence) {
+            if (this.options[value]) {
+                this.oldValue = value;
+                if (silence) {
+                    this.clear();
+                    this.addItems(value);
+                } else {
+                    debounce_events(this, ['change'], function() {
+                        this.clear();
+                        this.addItems(value);
+                    });
+                }
+            }
         },
     
         /**
@@ -3509,21 +3516,23 @@
             };
         })();
 
-        // this.onFocus = (function(e) {
-        //     var original = self.onFocus;
-        //     return function(e) {
-        //         e.keyCode = KEY_BACKSPACE;
-        //         self.deleteSelection(e);
-        //         return original.apply(this, arguments);
-        //     };
-        // })();
+        this.onChange = (function(e) {
+            var original = self.onChange;
+            return function(newValue) {
+                if (newValue !== self.oldValue && self.options[newValue]) {
+                    self.oldValue = newValue;
+                    return original.apply(this, arguments);
+                }
+                return;
+            };
+        })();
 
         this.onBlur = (function(e) {
             var original = self.onBlur;
             return function(e) {
                 var newValue = self.getValue();
                 if (!self.options[newValue]) {
-                    self.setValue(self.oldValue);
+                    self.setValue(self.oldValue, true);
                 }
                 return original.apply(this, arguments);
             };

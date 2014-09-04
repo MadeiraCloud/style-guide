@@ -1,6 +1,6 @@
 $ () ->
 
-    $('body').on 'DOMNodeInserted', '.property .group', (event) ->
+    $('.property').on 'DOMNodeInserted', '.group', (event) ->
 
         setTimeout () ->
 
@@ -13,24 +13,23 @@ $ () ->
                     $valueDom.selectize({
                         persist: false,
                         valueField: 'value',
-                        labelField: 'name',
-                        searchField: ['name'],
+                        labelField: 'text',
+                        searchField: ['text'],
                         create: false,
                         openOnFocus: false,
                         plugins: ['restore_on_return'],
                         onInitialize: () ->
-                            @setValue(@$input.attr('value'))
+                            @setValue(@$input.attr('value'), true)
                         options: [
-                            {name: 'TRUE', value: 'true'},
-                            {name: 'FALSE', value: 'false'}
+                            {text: 'TRUE', value: 'true'},
+                            {text: 'FALSE', value: 'false'}
                         ],
                         render: {
                             option: (item) ->
-                                return '<div>O ' + item.name + '</div>'
+                                return '<div>O ' + item.text + '</div>'
                             item: (item) ->
-                                return '<div>O ' + item.name + '</div>'
+                                return '<div>O ' + item.text + '</div>'
                         },
-                        onFocus: () ->
                     })
 
                 if $valueDom.hasClass('option')
@@ -41,8 +40,20 @@ $ () ->
                         openOnFocus: false,
                         plugins: ['restore_on_return']
                         onInitialize: () ->
-                            @setValue(@$input.attr('value'))
+                            @setValue(@$input.attr('value'), true)
+                        ,
+                        render: {
+                            option: (item) ->
+                                return '<div>O ' + item.text + '</div>'
+                            item: (item) ->
+                                return '<div>O ' + item.text + '</div>'
+                        }
                     })
-        , 0
 
-    $('.property').html($('#dom').html()).append($('#dom').html())
+        , 1
+
+    $(document).on 'change', 'select.value', (event) ->
+
+        console.log(event.target.value)
+
+    $('.property').html($('#dom').html())
