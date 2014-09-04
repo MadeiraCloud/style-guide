@@ -3509,13 +3509,14 @@
             };
         })();
 
-        this.onFocus = (function(e) {
-            var original = self.onFocus;
-            return function(e) {
-                self.deleteSelection(e);
-                return original.apply(this, arguments);
-            };
-        })();
+        // this.onFocus = (function(e) {
+        //     var original = self.onFocus;
+        //     return function(e) {
+        //         e.keyCode = KEY_BACKSPACE;
+        //         self.deleteSelection(e);
+        //         return original.apply(this, arguments);
+        //     };
+        // })();
 
         this.onBlur = (function(e) {
             var original = self.onBlur;

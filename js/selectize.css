@@ -287,11 +287,11 @@
 }
 .selectize-control.single .selectize-input:after {
   content: ' ';
-  display: block;
+  display: none;
   position: absolute;
   top: 50%;
   right: 15px;
-  margin-top: -3px;
+  margin-top: 0px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -311,6 +311,6 @@
   margin: 0 4px 0 -2px !important;
 }
 .selectize-control .selectize-input.disabled {
-  opacity: 0.5;
+  /*opacity: 0.5;*/
   background-color: #fafafa;
 }
