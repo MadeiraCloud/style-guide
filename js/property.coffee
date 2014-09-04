@@ -2,7 +2,9 @@ $ () ->
 
     $('.property').on 'DOMNodeInserted', '.group', (event) ->
 
-        setTimeout () ->
+        that = @
+
+        # setTimeout () ->
 
             $valueDom = $(event.target).find('select.value')
 
@@ -17,7 +19,7 @@ $ () ->
                         searchField: ['text'],
                         create: false,
                         openOnFocus: false,
-                        plugins: ['restore_on_return'],
+                        plugins: ['custom_selection'],
                         onInitialize: () ->
                             @setValue(@$input.attr('value'), true)
                         options: [
@@ -29,7 +31,7 @@ $ () ->
                                 return '<div>O ' + item.text + '</div>'
                             item: (item) ->
                                 return '<div>O ' + item.text + '</div>'
-                        },
+                        }
                     })
 
                 if $valueDom.hasClass('option')
@@ -38,7 +40,7 @@ $ () ->
                         persist: false,
                         create: false,
                         openOnFocus: false,
-                        plugins: ['restore_on_return']
+                        plugins: ['custom_selection']
                         onInitialize: () ->
                             @setValue(@$input.attr('value'), true)
                         ,
@@ -50,7 +52,7 @@ $ () ->
                         }
                     })
 
-        , 1
+        # , 1
 
     $(document).on 'change', 'select.value', (event) ->
 

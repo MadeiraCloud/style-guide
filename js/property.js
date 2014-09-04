@@ -1,5 +1,7 @@
 $(function() {
   $('.property').on('DOMNodeInserted', '.group', function(event) {
+    var that;
+    that = this;
     return setTimeout(function() {
       var $valueDom;
       $valueDom = $(event.target).find('select.value');
@@ -12,7 +14,7 @@ $(function() {
             searchField: ['text'],
             create: false,
             openOnFocus: false,
-            plugins: ['restore_on_return'],
+            plugins: ['custom_selection'],
             onInitialize: function() {
               return this.setValue(this.$input.attr('value'), true);
             },
@@ -40,7 +42,7 @@ $(function() {
             persist: false,
             create: false,
             openOnFocus: false,
-            plugins: ['restore_on_return'],
+            plugins: ['custom_selection'],
             onInitialize: function() {
               return this.setValue(this.$input.attr('value'), true);
             },

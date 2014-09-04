@@ -3489,7 +3489,7 @@
         })();
     });
 
-    Selectize.define('restore_on_return', function(options) {
+    Selectize.define('custom_selection', function(options) {
         var self = this;
     
         this.onKeyDown = (function(e) {
