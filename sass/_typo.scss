@@ -28,6 +28,7 @@ body {
 	font-family : Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;;
 	font-weight : 100;
 	color       : desaturate(lighten($light-p, 30%),10%);
+	font-size   : 14px;
 }
 
 a {
@@ -45,4 +46,27 @@ h1 {
 
 h2 {
 	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 1.1em;
+}
+
+p {
+	font-size: 1em;
+}
+
+code, .text-mono {
+	background : #000;
+	color      : $dark-g;
+	font-size  : 14px;
+	font-family: "Consolas","Monaco","Ubuntu Mono",monospace !important;
+}
+
+pre {
+	background : #000;
 }
