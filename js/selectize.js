@@ -1756,12 +1756,19 @@
          *
          * @param {mixed} value
          */
-        setValue: function(value) {
-            this.oldValue = value;
-            debounce_events(this, ['change'], function() {
-                this.clear();
-                this.addItems(value);
-            });
+        setValue: function(value, silence) {
+            if (this.options[value]) {
+                this.oldValue = value;
+                if (silence) {
+                    this.clear();
+                    this.addItems(value);
+                } else {
+                    debounce_events(this, ['change'], function() {
+                        this.clear();
+                        this.addItems(value);
+                    });
+                }
+            }
         },
     
         /**
@@ -3482,7 +3489,7 @@
         })();
     });
 
-    Selectize.define('restore_on_return', function(options) {
+    Selectize.define('custom_selection', function(options) {
         var self = this;
     
         this.onKeyDown = (function(e) {
@@ -3509,11 +3516,14 @@
             };
         })();
 
-        this.onFocus = (function(e) {
-            var original = self.onFocus;
-            return function(e) {
-                self.deleteSelection(e);
-                return original.apply(this, arguments);
+        this.onChange = (function(e) {
+            var original = self.onChange;
+            return function(newValue) {
+                if (newValue !== self.oldValue && self.options[newValue]) {
+                    self.oldValue = newValue;
+                    return original.apply(this, arguments);
+                }
+                return;
             };
         })();
 
@@ -3522,7 +3532,7 @@
             return function(e) {
                 var newValue = self.getValue();
                 if (!self.options[newValue]) {
-                    self.setValue(self.oldValue);
+                    self.setValue(self.oldValue, true);
                 }
                 return original.apply(this, arguments);
             };

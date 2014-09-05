@@ -136,67 +136,123 @@ h2 {
 /* line 6, ../sass/property.scss */
 .property {
   background-color: #1a1a1b;
-  width: 530px;
+  width: 520px;
   font-size: 14px;
 }
 /* line 10, ../sass/property.scss */
 .property .group {
   display: inline-block;
+  position: relative;
 }
 /* line 14, ../sass/property.scss */
+.property .group.required:after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  color: #fff;
+  text-align: right;
+  float: right;
+  width: 0;
+  height: 0;
+  line-height: 24px;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  margin-left: -20px;
+  border-color: transparent #0b8900 transparent transparent;
+}
+/* line 29, ../sass/property.scss */
+.property .group.required:before {
+  position: absolute;
+  z-index: 2;
+  content: "*";
+  color: #fff;
+  text-align: right;
+  right: 0;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+/* line 40, ../sass/property.scss */
 .property .key {
   width: 200px;
   float: left;
-  padding: 15px;
+  padding: 14px 15px 0 15px;
   background-color: #34343e;
   display: block;
+  height: 44px;
+  line-height: 18px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
-/* line 21, ../sass/property.scss */
+/* line 51, ../sass/property.scss */
 .property .value {
-  width: 300px;
+  width: 320px;
   float: left;
   background-color: #27272b;
   border: 0;
 }
-/* line 28, ../sass/property.scss */
+/* line 62, ../sass/property.scss */
+.property input.value {
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  height: 44px;
+  font-size: 14px;
+}
+/* line 70, ../sass/property.scss */
+.property input.value:focus {
+  background-color: #424242;
+  outline: none;
+}
+/* line 74, ../sass/property.scss */
+.property input.value[disabled] {
+  color: #777;
+}
+/* line 78, ../sass/property.scss */
 .property .selectize-control {
   height: 44px;
 }
-/* line 30, ../sass/property.scss */
+/* line 80, ../sass/property.scss */
 .property .selectize-control .selectize-input {
   color: #fff;
   border: 0;
   height: 44px;
 }
-/* line 34, ../sass/property.scss */
+/* line 84, ../sass/property.scss */
 .property .selectize-control .selectize-input.focus {
   background-color: #424242;
 }
-/* line 37, ../sass/property.scss */
+/* line 87, ../sass/property.scss */
+.property .selectize-control .selectize-input.disabled {
+  color: #777;
+  background-color: #27272b;
+}
+/* line 91, ../sass/property.scss */
 .property .selectize-control .selectize-input input {
   color: #fff;
   padding: 6px;
   font: inherit;
 }
-/* line 42, ../sass/property.scss */
+/* line 96, ../sass/property.scss */
 .property .selectize-control .selectize-input div {
   padding: 6px;
 }
-/* line 46, ../sass/property.scss */
+/* line 100, ../sass/property.scss */
 .property .selectize-control .selectize-dropdown {
   background-color: #373737;
   color: #9d9d97;
   border: 0;
 }
-/* line 50, ../sass/property.scss */
+/* line 104, ../sass/property.scss */
 .property .selectize-control .selectize-dropdown [data-selectable], .property .selectize-control .selectize-dropdown .optgroup-header {
   padding: 14px;
 }
-/* line 54, ../sass/property.scss */
+/* line 108, ../sass/property.scss */
 .property .selectize-control .selectize-dropdown .selectize-dropdown-content .selected {
   color: #fff;
 }
-/* line 57, ../sass/property.scss */
+/* line 111, ../sass/property.scss */
 .property .selectize-control .selectize-dropdown .selectize-dropdown-content .active {
   background-color: #363644;
   color: #fff;
