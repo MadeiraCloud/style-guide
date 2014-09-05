@@ -3,21 +3,28 @@
 @import "_typo.scss";
 @import "_transition.scss";
 
+$propertyGroupHeight: 34px;
+$propertyKeyWidth: 150px;
+$propertyValueWidth: 230px;
+$propertyFontSize: 12px;
+
 .property {
     background-color: #1a1a1b;
-    width: 520px;
-    font-size: 14px;
+    width: $propertyKeyWidth + $propertyValueWidth;
+    font-size: $propertyFontSize;
     .group {
-        // border-bottom: 1px #1a1a1b solid;
-        display: inline-block;
+        // display: inline-block;
         position: relative;
+        display: table;
+        border-bottom: 1px #000 solid;
         &.required:after {
             position: absolute;
             z-index: 1;
             content: "";
             color: #fff;
             text-align: right;
-            float: right;
+            right: 0;
+            top: 0;
             width: 0;
             height: 0;
             line-height: 24px;
@@ -33,40 +40,36 @@
             color: #fff;
             text-align: right;
             right: 0;
+            top: 0;
             margin-top: 3px;
             margin-right: 3px;
         }
     }
     .key {
-        width: 200px;
-        float: left;
-        padding: 14px 15px 0 15px;
+        width: $propertyKeyWidth;
+        padding: 4px 10px;
+        display: table-cell;
+        vertical-align: middle;
         background-color: #34343e;
-        display: block;
-        height: 44px;
-        line-height: 18px;
+        line-height: 14px;
+        // text-align: right;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
     }
     .value {
-        width: 320px;
-        float: left;
-        // height: 44px;
+        width: $propertyValueWidth;
         background-color: #27272b;
         border: 0;
-        // display: none;
-        // &.selectized {
-        //     display: block;
-        // }
     }
     input.value {
         color: #fff;
-        padding: 15px;
+        padding: 11px;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
         margin: 0;
-        height: 44px;
-        font-size: 14px;
+        // height: 100%;
+        // height: $propertyGroupHeight + 2;
+        font-size: $propertyFontSize;
         &:focus {
             background-color: #424242;
             outline: none;
@@ -76,11 +79,16 @@
         }
     }
     .selectize-control {
-        height: 44px;
+        // height: $propertyGroupHeight;
+        height: 100%;
+        &.mutil .selectize-input {
+            overflow-y: auto;
+        }
         .selectize-input {
             color: #fff;
             border: 0;
-            height: 44px;
+            // height: $propertyGroupHeight;
+            height: 100%;
             &.focus {
                 background-color: #424242;
             }
@@ -90,11 +98,11 @@
             }
             input {
                 color: #fff;
-                padding: 6px;
+                padding: 2px;
                 font: inherit;
             }
             div {
-                padding: 6px;
+                padding: 2px;
             }
         }
         .selectize-dropdown {
@@ -102,7 +110,7 @@
             color: #9d9d97;
             border: 0;
             [data-selectable], .optgroup-header {
-                padding: 14px;
+                padding: 10px;
             }
             .selectize-dropdown-content {
                 .selected {
@@ -113,6 +121,19 @@
                     color: #fff;
                 }
             }
+        }
+    }
+    .selectize-control.multi .selectize-input > div {
+        height: 100%;
+        background-color: #000;
+        border: 1px #444 solid;
+        border-radius: 3px;
+        color: #fff;
+        padding: 1px 5px;
+        &.active {
+            background-color: #2a608d;
+            border: 1px #444 solid;
+            color: #fff;
         }
     }
 }

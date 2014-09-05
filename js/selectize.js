@@ -1757,7 +1757,7 @@
          * @param {mixed} value
          */
         setValue: function(value, silence) {
-            if (this.options[value]) {
+            if (this.isValueInOptions(value)) {
                 this.oldValue = value;
                 if (silence) {
                     this.clear();
@@ -2448,7 +2448,7 @@
                 self.updateOriginalInput();
                 self.positionDropdown();
                 self.trigger('item_remove', value);
-                self.setTextboxValue(value.toUpperCase());
+                self.setTextboxValue(value);
             }
         },
     
@@ -3001,8 +3001,32 @@
             } else {
                 delete self.renderCache[templateName];
             }
+        },
+
+        /*
+         * If new value in options list, used for check before set the value
+         */
+        isValueInOptions: function(value) {
+            
+            if (!value || !value.length) {
+                return false;
+            }
+
+            var self = this;
+            
+            if ($.isArray(value)) {
+                for (var v in value) {
+                    if (!self.options[value[v]]) {
+                        return false;
+                    }
+                }
+            } else {
+                if (!self.options[value]) {
+                    return false;
+                }
+            }
+            return true;
         }
-    
     
     });
     
@@ -3223,6 +3247,24 @@
     
             instance = new Selectize($input, $.extend(true, {}, defaults, settings_element, settings_user));
         });
+    };
+
+    $.fn.getValue = function() {
+        var dom = this[0];
+        if (dom.selectize) {
+            return dom.selectize.getValue();
+        } else {
+            return null;
+        }
+    };
+
+    $.fn.setValue = function(value) {
+        var dom = this[0];
+        if (dom.selectize) {
+            return dom.selectize.setValue(value);
+        } else {
+            return null;
+        }
     };
     
     $.fn.selectize.defaults = Selectize.defaults;
@@ -3519,7 +3561,7 @@
         this.onChange = (function(e) {
             var original = self.onChange;
             return function(newValue) {
-                if (newValue !== self.oldValue && self.options[newValue]) {
+                if (newValue !== self.oldValue && self.isValueInOptions(newValue)) {
                     self.oldValue = newValue;
                     return original.apply(this, arguments);
                 }
@@ -3531,7 +3573,7 @@
             var original = self.onBlur;
             return function(e) {
                 var newValue = self.getValue();
-                if (!self.options[newValue]) {
+                if (!self.isValueInOptions(newValue)) {
                     self.setValue(self.oldValue, true);
                 }
                 return original.apply(this, arguments);
