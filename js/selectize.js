@@ -2448,7 +2448,7 @@
                 self.updateOriginalInput();
                 self.positionDropdown();
                 self.trigger('item_remove', value);
-                self.setTextboxValue(value.toUpperCase());
+                self.setTextboxValue(value);
             }
         },
     

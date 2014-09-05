@@ -22,14 +22,14 @@ $(function() {
           openOnFocus: false,
           plugins: ['custom_selection'],
           onInitialize: function() {
-            return this.setValue(this.$input.attr('value'), true);
+            return this.setValue(this.$input.attr('value').split(','), true);
           },
           options: [
             {
-              text: 'TRUE',
+              text: 'True',
               value: 'true'
             }, {
-              text: 'FALSE',
+              text: 'False',
               value: 'false'
             }
           ],
@@ -52,14 +52,14 @@ $(function() {
           openOnFocus: false,
           plugins: ['custom_selection'],
           onInitialize: function() {
-            return this.setValue(this.$input.attr('value'), true);
+            return this.setValue(this.$input.attr('value').split(','), true);
           },
           render: {
             option: function(item) {
-              return '<div>O ' + item.text + '</div>';
+              return '<div>' + item.text + '</div>';
             },
             item: function(item) {
-              return '<div>O ' + item.text + '</div>';
+              return '<div>' + item.text + '</div>';
             }
           }
         });

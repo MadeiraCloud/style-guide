@@ -29,10 +29,10 @@ $ () ->
                     openOnFocus: false,
                     plugins: ['custom_selection'],
                     onInitialize: () ->
-                        @setValue(@$input.attr('value'), true)
+                        @setValue(@$input.attr('value').split(','), true)
                     options: [
-                        {text: 'TRUE', value: 'true'},
-                        {text: 'FALSE', value: 'false'}
+                        {text: 'True', value: 'true'},
+                        {text: 'False', value: 'false'}
                     ],
                     render: {
                         option: (item) ->
@@ -52,13 +52,13 @@ $ () ->
                     openOnFocus: false,
                     plugins: ['custom_selection']
                     onInitialize: () ->
-                        @setValue(@$input.attr('value'), true)
+                        @setValue(@$input.attr('value').split(','), true)
                     ,
                     render: {
                         option: (item) ->
-                            return '<div>O ' + item.text + '</div>'
+                            return '<div>' + item.text + '</div>'
                         item: (item) ->
-                            return '<div>O ' + item.text + '</div>'
+                            return '<div>' + item.text + '</div>'
                     }
                 })
 
