@@ -1,0 +1,493 @@
+@font-face {
+  font-family: 'MCIcon';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/css/fonts/icon.eot');
+  src: url('/css/fonts/../fonts/icon.eot?#iefix') format("embedded-opentype"), url("../fonts/icon.woff") format("woff"), url("../fonts/icon.ttf") format("truetype");
+}
+
+/* line 94, ../scss/icon-font.scss */
+.icon-play:before,
+.icon-stop:before,
+.icon-save:before,
+.icon-undo:before,
+.icon-redo:before,
+.icon-zoom-out:before,
+.icon-zoom-in:before,
+.icon-send:before,
+.icon-add:before,
+.icon-duplicate:before,
+.icon-delete:before,
+.icon-new-stack:before,
+.icon-btn-details:before,
+.icon-btn-back:before,
+.icon-export-png:before,
+.icon-export-json:before,
+.icon-caret-down:before,
+.icon-terminate:before,
+.icon-forget-app:before,
+.icon-close:before,
+.icon-caret-right:before,
+.icon-caret-left:before,
+.icon-close-circle:before,
+.icon-info:before,
+.icon-user:before,
+.icon-password:before,
+.icon-notification:before,
+.icon-message:before,
+.icon-remove:before,
+.icon-allow:before,
+.icon-deny:before,
+.icon-outbound:before,
+.icon-inbound:before,
+.icon-refresh:before,
+.icon-edit:before,
+.icon-resize-right:before,
+.icon-resize-left:before,
+.icon-resize-down:before,
+.icon-resize-up:before,
+.icon-pending:before,
+.icon-warning:before,
+.icon-error:before,
+.icon-success:before,
+.icon-time:before,
+.icon-sort:before,
+.icon-detail:before,
+.icon-del:before,
+.icon-line-shape:before,
+.icon-copy:before,
+.icon-straight:before,
+.icon-elbow:before,
+.icon-bezier-q:before,
+.icon-bezier-qt:before,
+.icon-toolbar-cloudformation:before,
+.icon-update-app:before,
+.icon-cancel-update-app:before,
+.icon-apply-app:before,
+.icon-visualize:before,
+.icon-toolbar-diff:before,
+.icon-desc:before,
+.icon-log:before,
+.icon-syslog:before,
+.icon-import:before,
+.icon-drag-copy:before,
+.icon-gear:before,
+.icon-menu:before,
+.icon-expand:before,
+.icon-save-app:before,
+.icon-support:before,
+.icon-reload:before,
+.icon-resources:before,
+.icon-hide-sg:before,
+.icon-kp:before,
+.icon-ebs-snap:before,
+.icon-sns:before,
+.icon-cert:before,
+.icon-dhcp:before,
+.icon-pg:before,
+.icon-rds-snap:before,
+.icon-rds-restore:before {
+  font: 16px/1em "MCIcon";
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 101, ../scss/icon-font.scss */
+.icon-play:before {
+  content: "\F110";
+}
+
+/* line 102, ../scss/icon-font.scss */
+.icon-stop:before {
+  content: "\F111";
+}
+
+/* line 103, ../scss/icon-font.scss */
+.icon-save:before {
+  content: "\F112";
+}
+
+/* line 105, ../scss/icon-font.scss */
+.icon-undo:before {
+  content: "\F114";
+}
+
+/* line 106, ../scss/icon-font.scss */
+.icon-redo:before {
+  content: "\F115";
+}
+
+/* line 107, ../scss/icon-font.scss */
+.icon-zoom-in:before {
+  content: "\F116";
+}
+
+/* line 108, ../scss/icon-font.scss */
+.icon-zoom-out:before {
+  content: "\F117";
+}
+
+/* line 109, ../scss/icon-font.scss */
+.icon-send:before {
+  content: "\F118";
+}
+
+/* line 110, ../scss/icon-font.scss */
+.icon-add:before {
+  content: "\F119";
+}
+
+/* line 111, ../scss/icon-font.scss */
+.icon-duplicate:before {
+  content: "\F11B";
+}
+
+/* line 112, ../scss/icon-font.scss */
+.icon-duplicate:before {
+  content: "\F11B";
+}
+
+/* line 113, ../scss/icon-font.scss */
+.icon-delete:before {
+  content: "\F11C";
+}
+
+/* line 114, ../scss/icon-font.scss */
+.icon-new-stack:before {
+  content: "\F11A";
+}
+
+/* line 115, ../scss/icon-font.scss */
+.icon-btn-details:before {
+  content: "\F11F";
+}
+
+/* line 116, ../scss/icon-font.scss */
+.icon-btn-back:before {
+  content: "\F120";
+}
+
+/* line 117, ../scss/icon-font.scss */
+.icon-export-png:before {
+  content: "\F11D";
+}
+
+/* line 118, ../scss/icon-font.scss */
+.icon-export-json:before {
+  content: "\F11E";
+}
+
+/* line 119, ../scss/icon-font.scss */
+.icon-caret-down:before {
+  content: "\F121";
+}
+
+/* line 120, ../scss/icon-font.scss */
+.icon-close:before {
+  content: "\F122";
+}
+
+/* line 121, ../scss/icon-font.scss */
+.icon-terminate:before {
+  content: "\F154";
+}
+
+/* line 122, ../scss/icon-font.scss */
+.icon-forget-app:before {
+  content: "\F11C";
+}
+
+/* line 123, ../scss/icon-font.scss */
+.icon-caret-right:before {
+  content: "\F124";
+}
+
+/* line 124, ../scss/icon-font.scss */
+.icon-caret-left:before {
+  content: "\F125";
+}
+
+/* line 125, ../scss/icon-font.scss */
+.icon-close-circle:before {
+  content: "\F126";
+}
+
+/* line 126, ../scss/icon-font.scss */
+.icon-info:before {
+  content: "\F127";
+}
+
+/* line 127, ../scss/icon-font.scss */
+.icon-password:before {
+  content: "\F128";
+}
+
+/* line 128, ../scss/icon-font.scss */
+.icon-user:before {
+  content: "\F129";
+}
+
+/* line 129, ../scss/icon-font.scss */
+.icon-notification:before {
+  content: "\F12A";
+}
+
+/* line 130, ../scss/icon-font.scss */
+.icon-message:before {
+  content: "\F12B";
+}
+
+/* line 131, ../scss/icon-font.scss */
+.icon-remove:before {
+  content: "\F12C";
+}
+
+/* line 132, ../scss/icon-font.scss */
+.icon-allow:before {
+  content: "\F12D";
+}
+
+/* line 133, ../scss/icon-font.scss */
+.icon-deny:before {
+  content: "\F12E";
+}
+
+/* line 134, ../scss/icon-font.scss */
+.icon-outbound:before {
+  content: "\F12F";
+}
+
+/* line 135, ../scss/icon-font.scss */
+.icon-inbound:before {
+  content: "\F130";
+}
+
+/* line 136, ../scss/icon-font.scss */
+.icon-refresh:before {
+  content: "\F131";
+}
+
+/* line 137, ../scss/icon-font.scss */
+.icon-edit:before {
+  content: "\F132";
+}
+
+/* line 138, ../scss/icon-font.scss */
+.icon-resize-right:before {
+  content: "\F133";
+}
+
+/* line 139, ../scss/icon-font.scss */
+.icon-resize-left:before {
+  content: "\F134";
+}
+
+/* line 140, ../scss/icon-font.scss */
+.icon-resize-down:before {
+  content: "\F135";
+}
+
+/* line 141, ../scss/icon-font.scss */
+.icon-resize-up:before {
+  content: "\F136";
+}
+
+/* line 142, ../scss/icon-font.scss */
+.icon-pending:before {
+  content: "\F137";
+}
+
+/* line 143, ../scss/icon-font.scss */
+.icon-warning:before {
+  content: "\F138";
+}
+
+/* line 144, ../scss/icon-font.scss */
+.icon-error:before {
+  content: "\F139";
+}
+
+/* line 145, ../scss/icon-font.scss */
+.icon-success:before, .icon-apply-app:before {
+  content: "\F13A";
+}
+
+/* line 146, ../scss/icon-font.scss */
+.icon-time:before {
+  content: "\F13B";
+}
+
+/* line 147, ../scss/icon-font.scss */
+.icon-sort:before {
+  content: "\F13C";
+}
+
+/* line 148, ../scss/icon-font.scss */
+.ipt-controls > .icon-add:before {
+  content: "\F13D";
+}
+
+/* line 149, ../scss/icon-font.scss */
+.icon-del:before, .icon-cancel-update-app:before {
+  content: "\F13E";
+}
+
+/* line 150, ../scss/icon-font.scss */
+.icon-detail:before {
+  content: "\F140";
+}
+
+/* line 151, ../scss/icon-font.scss */
+.icon-line-shape:before {
+  content: "\F141";
+}
+
+/* line 152, ../scss/icon-font.scss */
+.icon-copy:before {
+  content: "\F142";
+}
+
+/* line 153, ../scss/icon-font.scss */
+.icon-straight:before {
+  content: "\F143";
+}
+
+/* line 154, ../scss/icon-font.scss */
+.icon-elbow:before {
+  content: "\F144";
+}
+
+/* line 155, ../scss/icon-font.scss */
+.icon-bezier-qt:before {
+  content: "\F145";
+}
+
+/* line 156, ../scss/icon-font.scss */
+.icon-bezier-q:before {
+  content: "\F146";
+}
+
+/* line 157, ../scss/icon-font.scss */
+.icon-toolbar-cloudformation:before {
+  content: "\F147";
+}
+
+/* line 158, ../scss/icon-font.scss */
+.icon-update-app:before {
+  content: "\F148";
+}
+
+/* line 159, ../scss/icon-font.scss */
+.icon-visualize:before {
+  content: "\F149";
+}
+
+/* line 160, ../scss/icon-font.scss */
+.icon-log:before {
+  content: "\F14A";
+}
+
+/* line 161, ../scss/icon-font.scss */
+.icon-desc:before {
+  content: "\F14B";
+}
+
+/* line 162, ../scss/icon-font.scss */
+.icon-syslog:before {
+  content: "\F14C";
+}
+
+/* line 163, ../scss/icon-font.scss */
+.icon-toolbar-diff:before {
+  content: "\F14D";
+}
+
+/* line 164, ../scss/icon-font.scss */
+.icon-import:before {
+  content: "\F14E";
+}
+
+/* line 165, ../scss/icon-font.scss */
+.icon-drag-copy:before {
+  content: "\F14F";
+}
+
+/* line 166, ../scss/icon-font.scss */
+.icon-gear:before {
+  content: "\F150";
+}
+
+/* line 167, ../scss/icon-font.scss */
+.icon-menu:before {
+  content: "\F151";
+}
+
+/* line 168, ../scss/icon-font.scss */
+.icon-expand:before {
+  content: "\F152";
+}
+
+/* line 169, ../scss/icon-font.scss */
+.icon-save-app:before {
+  content: "\F153";
+}
+
+/* line 170, ../scss/icon-font.scss */
+.icon-support:before {
+  content: "\F155";
+}
+
+/* line 171, ../scss/icon-font.scss */
+.icon-reload:before {
+  content: "\F156";
+}
+
+/* line 172, ../scss/icon-font.scss */
+.icon-resources:before {
+  content: "\F157";
+}
+
+/* line 173, ../scss/icon-font.scss */
+.icon-hide-sg:before {
+  content: "\F160";
+}
+
+/* line 174, ../scss/icon-font.scss */
+.icon-kp:before {
+  content: "\F161";
+}
+
+/* line 175, ../scss/icon-font.scss */
+.icon-ebs-snap:before {
+  content: "\F162";
+}
+
+/* line 176, ../scss/icon-font.scss */
+.icon-sns:before {
+  content: "\F163";
+}
+
+/* line 177, ../scss/icon-font.scss */
+.icon-cert:before {
+  content: "\F164";
+}
+
+/* line 178, ../scss/icon-font.scss */
+.icon-dhcp:before {
+  content: "\F165";
+}
+
+/* line 179, ../scss/icon-font.scss */
+.icon-pg:before {
+  content: "\F166";
+}
+
+/* line 180, ../scss/icon-font.scss */
+.icon-rds-snap:before {
+  content: "\F167";
+}
+
+/* line 181, ../scss/icon-font.scss */
+.icon-rds-restore:before {
+  content: "\F168";
+}

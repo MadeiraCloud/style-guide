@@ -1,0 +1,105 @@
+@mixin activedPanelTab {
+    border-bottom: 2px solid $base-b;
+    color: $base-b;
+}
+
+.openstack .OEPanelRight {
+
+    width: 280px;
+
+    &.resource .resource { @include activedPanelTab; }
+    &.property .property { @include activedPanelTab; }
+    &.state    .state    { @include activedPanelTab; }
+    &.config   .config   { @include activedPanelTab; }
+
+    &.hidden {
+        right: 0;
+        background: transparent;
+        pointer-events: none;
+        .sidebar-title { pointer-events: auto; }
+        .panel-body { right: -280px; }
+    }
+
+    .sidebar-title {
+        box-sizing: border-box;
+        border-bottom: 1px solid #555252;
+        a {
+            width: 25%;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        a:hover {
+            color: #eee;
+        }
+    }
+
+    .panel-body {
+        overflow: auto;
+        position: absolute;
+        top: 39px;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+    }
+    .panel-body section {
+        &.system-image .selectbox {
+            width: 108px;
+        }
+
+        header {
+            background: $dark-p-1;
+            color: white;
+            height: 28px;
+            line-height: 28px;
+            position: relative;
+            padding: 0 8px;
+            aside {
+                position: absolute;
+                top: 0;
+                right: 0;
+                .selection {
+                    background: $dark-p-1;
+                    color: #F3F3F3;
+                    height: 28px;
+                    padding: 0 20px 0 8px;
+                    border: none;
+                    border-left: 1px solid $dark-p-2;
+                    border-radius: 0;
+                    box-shadow: none;
+                    box-sizing: border-box;
+
+                    &::after {
+                        border-top-color: white;
+                    }
+                }
+                .dropdown { right: 0; min-width: 0; }
+            }
+
+        }
+
+        article {
+            padding: 10px;
+
+            .resource-item {
+                cursor: pointer;
+            }
+
+            & > ul::after {
+                content : "";
+                display : block;
+                height  : 0;
+                clear   : both;
+            }
+        }
+    }
+}
+
+@import "panels/resource-panel";
+@import "panels/property-panel";
+@import "panels/config-panel";
+@import "panels/state-panel";
+
+
